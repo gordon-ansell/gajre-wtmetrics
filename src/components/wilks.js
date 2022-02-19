@@ -268,12 +268,12 @@ export class WilksForm extends React.Component
                                     <span className="duowrap">
                                         <input name="bodyWeight" type="number" step="any" min="1" title="Enter your body weight." 
                                             id="bodyWeight" value={this.state.bodyWeight} onChange={this.handleChange}
-                                            style={{'max-width': "6em"}}/>
+                                            style={{maxWidth: "6em"}}/>
                                         <span className="select-wrapper">
                                             <select name="bodyWeightUnits" id="bodyWeightUnits" 
                                                 onChange={this.handleChange} 
                                                 value={this.state.bodyWeightUnits}
-                                                style={{'max-width': "4em"}}>
+                                                style={{maxWidth: "4em"}}>
                                                 <option value="kg">kg</option>
                                                 <option value="lb">lb</option>
                                             </select>
@@ -284,7 +284,7 @@ export class WilksForm extends React.Component
                                     <label htmlFor="age">Age</label>
                                     <input name="age" 
                                         title="If you want to see the adjustment for your age, enter your age here. Whole numbers only." 
-                                        step="1" min="14" max="90" type="number" id="age" style={{'max-width': "4em"}}
+                                        step="1" min="14" max="90" type="number" id="age" style={{maxWidth: "4em"}}
                                         value={this.state.age} onChange={this.handleChange} />
                                 </fieldset>
                             </div>
@@ -307,11 +307,11 @@ export class WilksForm extends React.Component
                                     <span className="duowrap">
                                         <input name="liftedWeight" type="number" step="any" min="1" 
                                             title="This can be for an invididual lift, but a true Wilks score is based on your combined squat, bench press and deadlift weights." 
-                                            style={{'max-width': "6em"}} id="liftedWeight"
+                                            style={{maxWidth: "6em"}} id="liftedWeight"
                                             onChange={this.handleChange}
                                             value={this.state.liftedWeight} />
                                         <span className="select-wrapper">
-                                            <select name="liftedWeightUnits" style={{'max-width': "4em"}} id="liftedWeightUnits" 
+                                            <select name="liftedWeightUnits" style={{maxWidth: "4em"}} id="liftedWeightUnits" 
                                                 onChange={this.handleChange}
                                                 value={this.state.liftedWeightUnits}>
                                                 <option value="kg">kg</option>
@@ -328,11 +328,11 @@ export class WilksForm extends React.Component
                                         <span className="duowrap">
                                             <input name="squatWeight" type="number" step="any" min="1" 
                                                 title="Enter the weight you lifted in the squat." 
-                                                style={{'max-width': "6em"}} id="squat" 
+                                                style={{maxWidth: "6em"}} id="squat" 
                                                 onChange={this.handleChange}
                                                 value={this.state.squatWeight} />
                                             <span className="select-wrapper">
-                                                <select name="squatWeightUnits" style={{'max-width': "4em"}} id="squatUnits"
+                                                <select name="squatWeightUnits" style={{maxWidth: "4em"}} id="squatUnits"
                                                     onChange={this.handleChange}
                                                     value={this.state.squatWeightUnits}>
                                                     <option value="kg">kg</option>
@@ -348,11 +348,11 @@ export class WilksForm extends React.Component
                                         <span className="duowrap">
                                             <input name="benchWeight" type="number" step="any" min="1" 
                                                 title="Enter the weight you lifted in the bench press." 
-                                                style={{'max-width': "6em"}} id="bench" 
+                                                style={{maxWidth: "6em"}} id="bench" 
                                                 onChange={this.handleChange}
                                                 value={this.state.benchWeight} />
                                             <span className="select-wrapper">
-                                                <select name="benchWeightUnits" style={{'max-width': "4em"}} id="benchUnits"
+                                                <select name="benchWeightUnits" style={{maxWidth: "4em"}} id="benchUnits"
                                                     onChange={this.handleChange}
                                                     value={this.state.benchWeightUnits}>
                                                     <option value="kg">kg</option>
@@ -368,11 +368,11 @@ export class WilksForm extends React.Component
                                         <span className="duowrap">
                                             <input name="deadWeight" type="number" step="any" min="1" 
                                                 title="Enter the weight you lifted in the deadlift." 
-                                                style={{'max-width': "6em"}} id="dead" 
+                                                style={{maxWidth: "6em"}} id="dead" 
                                                 onChange={this.handleChange}
                                                 value={this.state.deadWeight} />
                                             <span className="select-wrapper">
-                                                <select name="deadWeightUnits" style={{'max-width': "4em"}} id="deadUnits"
+                                                <select name="deadWeightUnits" style={{maxWidth: "4em"}} id="deadUnits"
                                                     onChange={this.handleChange}
                                                     value={this.state.deadWeightUnits}>
                                                     <option value="kg">kg</option>

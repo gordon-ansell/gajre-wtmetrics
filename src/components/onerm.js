@@ -153,13 +153,13 @@ export class OnermForm extends React.Component
                                 </fieldset>
                                 <fieldset name="repsfieldset">
                                     <label htmlFor="reps">Reps</label>
-                                    <input name="reps" step="1" min="1" max="15" type="number" style={{'max-width': "4em"}} 
+                                    <input name="reps" step="1" min="1" max="15" type="number" style={{maxWidth: "4em"}} 
                                         title="Enter the number of reps you performed (1-15)."        
                                         value={this.state.reps} onChange={this.handleChange} />
                                 </fieldset>
                                 <fieldset name="roundingfieldset">
                                     <label htmlFor="rounding">Rounding</label>
-                                    <input name="rounding" step="any" min="0.25" max="20" type="number" style={{'max-width': "5em"}}
+                                    <input name="rounding" step="any" min="0.25" max="20" type="number" style={{maxWidth: "5em"}}
                                         title="Enter the rounding value (0.25 - 20). This will typically be twice the smallest weight plate you have."                                    
                                         value={this.state.rounding} onChange={this.handleChange} />
                                 </fieldset>

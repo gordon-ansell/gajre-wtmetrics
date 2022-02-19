@@ -35,7 +35,7 @@ export default class McGlothinCalc extends BaseCalc
     calcMult()
     {
         if (!this.checkOpts(['reps'])) {
-            throw new WtCalculatorError(`${this.gc()} calculation does not have required options (multi).`);
+            throw new WtCalculatorError(`McGlothin calculation does not have required options (multi).`);
         }
 
         if (1 === this.opts.reps) {
@@ -56,7 +56,7 @@ export default class McGlothinCalc extends BaseCalc
     {
 
         if (!this.checkOpts(['liftedWeight'])) {
-            throw new WtCalculatorError(`${this.gc()} calculation does not have required options.`);
+            throw new WtCalculatorError(`McGlothin calculation does not have required options.`);
         }
 
         let mult = this.calcMult();

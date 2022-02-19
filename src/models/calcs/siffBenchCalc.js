@@ -11,4 +11,10 @@ import SiffTotalCalc from './siffTotalCalc';
  */
 export default class SiffBenchCalc extends SiffTotalCalc 
 {
+    /**
+     * The specifiv Siff value we're after.
+     * @member {string}
+     */
+    subVal = 'bench';
+
 }

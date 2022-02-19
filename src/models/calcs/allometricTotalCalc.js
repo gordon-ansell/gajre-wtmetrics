@@ -28,10 +28,10 @@ export default class AllometricTotalCalc extends BaseAgeCalc
     allometricDefs = {};
 
     /**
-     * The specifiv Siff value we're after.
+     * The specific allometric value we're after.
      * @member {string}
      */
-    subVal = null;
+    subVal = 'total';
 
     /**
      * Constructor.
@@ -45,17 +45,6 @@ export default class AllometricTotalCalc extends BaseAgeCalc
     {
         super(opts, defs);
         this.allometricDefs = (defs && defs.allo) ? defs.allo : ALLOMETRIC_DEFS; 
-        this.extractSubVal();
-    }
-
-    /**
-     * Extract the sub val from the constructor name.
-     * 
-     * @return {void}
-     */
-    extractSubVal()
-    {
-        this.subVal = this.constructor.name.split(/(?=[A-Z])/)[1].toLowerCase();
     }
 
     /**
@@ -68,12 +57,10 @@ export default class AllometricTotalCalc extends BaseAgeCalc
     calcMult()
     {
         if (!this.checkOpts(['bodyWeight'])) {
-            throw new WtCalculatorError(`${this.gc()} calculation does not have required options (multi).`);
+            throw new WtCalculatorError(`Allometric (${this.subval}) calculation does not have required options (multi).`);
         }
 
-        console.log(this.subVal);
         let s = this.allometricDefs[this.subVal];
-        console.log(s)
 
         let mult = this.opts.bodyWeight ** s;
 
@@ -89,14 +76,13 @@ export default class AllometricTotalCalc extends BaseAgeCalc
      */
     calc()
     {
-
         if ('total' === this.subVal) {
             if (!this.checkOpts(['liftedWeight'])) {
-                throw new WtCalculatorError(`${this.gc()} calculation does not have required options (for ${this.subVal}).`);
+                throw new WtCalculatorError(`Allometric calculation does not have required options (for ${this.subVal}).`);
             }
         } else {
             if (!this.checkOpts([this.subVal + 'Weight'])) {
-                throw new WtCalculatorError(`${this.gc()} calculation does not have required options (for ${this.subVal}).`);
+                throw new WtCalculatorError(`Allometric calculation does not have required options (for ${this.subVal}).`);
             }
         }
 

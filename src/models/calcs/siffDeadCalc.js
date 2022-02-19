@@ -11,4 +11,10 @@ import SiffTotalCalc from './siffTotalCalc';
  */
 export default class SiffDeadCalc extends SiffTotalCalc 
 {
+    /**
+     * The specifiv Siff value we're after.
+     * @member {string}
+     */
+    subVal = 'dead';
+
 }

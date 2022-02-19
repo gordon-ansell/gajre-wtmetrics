@@ -43,16 +43,6 @@ export class BaseCalc
     }
 
     /**
-     * Get the class name.
-     * 
-     * @return  {string}
-     */
-    gc()
-    {
-        return this.constructor.name;
-    }
-
-    /**
      * Check opts.
      * 
      * @param   {string[]}  check   Opts to check.
@@ -81,7 +71,7 @@ export class BaseCalc
      */
     calc()
     {
-        throw new WtCalculatorError(`${this.gc()}: You must define a 'calc()' function.`);
+        throw new WtCalculatorError(`BaseCalc: You must define a 'calc()' function.`);
     }
 
     /**

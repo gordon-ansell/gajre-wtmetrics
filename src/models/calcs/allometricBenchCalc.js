@@ -12,4 +12,9 @@ import AllometricTotalCalc from './allometricTotalCalc';
  */
 export default class AllometricBenchCalc extends AllometricTotalCalc
 {
+    /**
+     * The specific allometric value we're after.
+     * @member {string}
+     */
+    subVal = 'bench';
 }

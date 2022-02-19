@@ -48,7 +48,7 @@ export default class WilksCalc extends BaseAgeCalc
     calcMult()
     {
         if (!this.checkOpts(['bodyWeight', 'gender'])) {
-            throw new WtCalculatorError(`${this.gc()} calculation does not have required options (multi).`);
+            throw new WtCalculatorError(`Wilks calculation does not have required options (multi).`);
         }
 
         let bwMult = 0.0;
@@ -77,7 +77,7 @@ export default class WilksCalc extends BaseAgeCalc
     {
 
         if (!this.checkOpts(['liftedWeight', 'bodyWeight', 'gender'])) {
-            throw new WtCalculatorError(`${this.gc()} calculation does not have required options.`);
+            throw new WtCalculatorError(`Wilks calculation does not have required options.`);
         }
 
         let mult = this.calcMult();

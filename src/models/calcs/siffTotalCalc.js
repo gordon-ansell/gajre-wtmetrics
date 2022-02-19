@@ -30,7 +30,7 @@ export default class SiffTotalCalc extends BaseAgeCalc
      * The specifiv Siff value we're after.
      * @member {string}
      */
-    subVal = null;
+    subVal = 'total';
 
     /**
      * Constructor.
@@ -44,18 +44,8 @@ export default class SiffTotalCalc extends BaseAgeCalc
     {
         super(opts, defs);
         this.siffDefs = (defs && defs.siff) ? defs.siff : SIFF_DEFS; 
-        this.extractSubVal();
     }
 
-    /**
-     * Extract the sub val from the constructor name.
-     * 
-     * @return {void}
-     */
-    extractSubVal()
-    {
-        this.subVal = this.constructor.name.split(/(?=[A-Z])/)[1].toLowerCase();
-    }
 
     /**
      * Calculate multiplier.
@@ -67,7 +57,7 @@ export default class SiffTotalCalc extends BaseAgeCalc
     calcMult()
     {
         if (!this.checkOpts(['bodyWeight'])) {
-            throw new WtCalculatorError(`${this.gc()} calculation does not have required options (multi).`);
+            throw new WtCalculatorError(`Siff (${this.subVal}) calculation does not have required options (multi).`);
         }
 
         let s = this.siffDefs[this.subVal];
@@ -86,14 +76,13 @@ export default class SiffTotalCalc extends BaseAgeCalc
      */
     calc()
     {
-
         if ('total' === this.subVal) {
             if (!this.checkOpts(['liftedWeight'])) {
-                throw new WtCalculatorError(`${this.gc()} calculation does not have required options (for ${this.subVal}).`);
+                throw new WtCalculatorError(`Siff calculation does not have required options (for ${this.subVal}).`);
             }
         } else {
             if (!this.checkOpts([this.subVal + 'Weight'])) {
-                throw new WtCalculatorError(`${this.gc()} calculation does not have required options (for ${this.subVal}).`);
+                throw new WtCalculatorError(`Siff calculation does not have required options (for ${this.subVal}).`);
             }
         }
 

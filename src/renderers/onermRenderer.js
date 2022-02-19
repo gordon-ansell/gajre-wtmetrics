@@ -77,12 +77,10 @@ export default class OnermRenderer extends BaseRenderer
         p += `<th>Weight</th>`;
         p += `</tr>`;
 
-        console.log('raw: ' + this.avgRaw)
         for (let i = 100; i >= 5; i = i - 5) {
             p += `<tr>`;
             p += `<td className="size-50 left">` + i + `%</td>`;
             let r = this.avgRaw * (i / 100);
-            console.log(i + ': ' + r);
             p += `<td className="size-50 right">` + BaseCalc.formatNumber(BaseCalc.mround(r, this.opts.rounding)) + `</td>`;
             p += `</tr>`;
         }

@@ -12,4 +12,10 @@ import AllometricTotalCalc from './allometricTotalCalc';
  */
 export default class AllometricDeadCalc extends AllometricTotalCalc
 {
+    /**
+     * The specific allometric value we're after.
+     * @member {string}
+     */
+    subVal = 'dead';
+
 }
