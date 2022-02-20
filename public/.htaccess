@@ -1,0 +1,2 @@
+RewriteEngine On 
+RewriteRule ^wtcalcs/(.*) https://wtcalcs.gordonansell.com/$1 [R=301,L]
