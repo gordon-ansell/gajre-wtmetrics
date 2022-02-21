@@ -11,7 +11,7 @@ import './main.css';
 import { OnermForm } from './components/onerm';
 import { WilksForm } from './components/wilks';
 import { MainIndex } from './components/main';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 
 /**
  * Application.
@@ -87,23 +87,23 @@ class App extends React.Component
     {
         return(
         <div>
-            <nav className="menu-top">
-                <input type="checkbox" id="menu-btn" />
-                <label htmlFor="menu-btn"><span className="icon"></span></label>
-                <ul>
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="/onerm">One Rep Maximum</a>
-                    </li>
-                    <li>
-                        <a href="/wilks">Wilks Score</a>
-                    </li>
-                </ul>
-            </nav>
-            <BrowserRouter>
-                <Routes>
+           <BrowserRouter>
+                <nav className="menu-top">
+                    <input type="checkbox" id="menu-btn" />
+                    <label htmlFor="menu-btn"><span className="icon"></span></label>
+                    <ul>
+                        <li>
+                            <Link to="/">Home</Link>
+                        </li>
+                        <li>
+                            <Link to="/onerm">One Rep Maximum</Link>
+                        </li>
+                        <li>
+                            <Link to="/wilks">Wilks Score</Link>
+                        </li>
+                    </ul>
+                </nav>
+                 <Routes>
                     <Route path="/" element={<MainIndex />} />
                     <Route path="/onerm" element={<OnermForm />} />
                     <Route path="/wilks" element={<WilksForm />} />

@@ -1,4 +1,2 @@
 RewriteEngine On 
-RewriteRule ^wtcalcs/onerm(.*) https://wtcalcs.gordonansell.com/onerm/$1 [R=301,L]
-RewriteRule ^wtcalcs/wilks(.*) https://wtcalcs.gordonansell.com/wilks/$1 [R=301,L]
 RewriteRule ^wtcalcs/(.*) https://wtcalcs.gordonansell.com/$1 [R=301,L]
