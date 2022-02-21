@@ -1,2 +1,10 @@
-RewriteEngine On 
-RewriteRule ^wtcalcs/(.*) https://wtcalcs.gordonansell.com/$1 [R=301,L]
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^wtcalcs/(.*) https://wtcalcs.gordonansell.com/$1 [R=301,L]
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteRule . /index.html [L]
+</IfModule>
