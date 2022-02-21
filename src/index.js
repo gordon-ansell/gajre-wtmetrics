@@ -104,7 +104,7 @@ class App extends React.Component
                     </ul>
                 </nav>
                  <Routes>
-                    <Route path="/" element={<MainIndex />} />
+                    <Route path="/" exact element={<MainIndex />} />
                     <Route path="/onerm" element={<OnermForm />} />
                     <Route path="/wilks" element={<WilksForm />} />
                 </Routes>
