@@ -7,7 +7,7 @@
 import React from 'react';
 import { BaseCalc } from '../models/calcs/baseCalc';
 import WilksRenderer from '../renderers/wilksRenderer';
-
+import { Helmet } from "react-helmet";
 
 /**
  * Wilks form.
@@ -245,6 +245,10 @@ export class WilksForm extends React.Component
     {
         return (
             <div>
+                <Helmet>
+                    <title>Wilks Score Calculator</title>
+                    <meta name="description" content="Calculate Wilks score, which is used in powerlifting to act as a handicap system based on bodyweight, gender and age." />
+                </Helmet>
                 <div className="form-container">
                     <div className="form-box">
                         <form id="wilksForm" onSubmit={this.handleSubmit}>

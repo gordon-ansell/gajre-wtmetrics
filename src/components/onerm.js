@@ -6,7 +6,7 @@
  */
 import React from 'react';
 import OnermRenderer from '../renderers/onermRenderer';
-
+import { Helmet } from "react-helmet";
 
 /**
  * Onerm form.
@@ -140,6 +140,10 @@ export class OnermForm extends React.Component
     {
         return (
             <div>
+                <Helmet>
+                    <title>1-Rep Maximum Calculator</title>
+                    <meta name="description" content="Calculate one-rep maximum for weights lifted at 2-15 reps. Uses a variety of formulae and gives an average." />
+                </Helmet>
                 <div className="form-container">
                     <div className="form-box">
                         <form id="onermForm" onSubmit={this.handleSubmit}>

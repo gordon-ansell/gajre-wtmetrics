@@ -37,6 +37,7 @@ $flextable-font-size: 90%;
 
 @import '../../node_modules/gas-fw/fw/_fw';
 @import '../../node_modules/gas-fw/fw/_flextable';
+@import '_menuTop.scss';
 
 .sitehdr-branding {
 
@@ -60,6 +61,15 @@ $flextable-font-size: 90%;
 
 .error {
     color: red;
+}
+
+.menu-top {
+    margin-bottom: 2em;
+}
+
+.intro {
+    clear:both;
+    @include clearfix;
 }
 
 #onermResults {

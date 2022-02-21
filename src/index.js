@@ -10,7 +10,8 @@ import ReactDOM from 'react-dom';
 import './main.css';
 import { OnermForm } from './components/onerm';
 import { WilksForm } from './components/wilks';
-
+import { MainIndex } from './components/main';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 /**
  * Application.
@@ -86,30 +87,28 @@ class App extends React.Component
     {
         return(
         <div>
-            <div className="menu">
-                <div className="form-container">
-                    <div className="form-box">
-                        <form id="selForm">
-                            <div name="row1">
-                                <fieldset name="onermfieldset" className="radio horizontal">
-                                    <input type="radio" value="onerm" name="mainMenuOption" id="onerm"
-                                        title="Calculate one-rep maximum."  
-                                        checked={'onerm' === this.state.mainMenuOption}
-                                        onChange={this.handleChange} />
-                                    <label htmlFor="onerm">One-Rep Maximum</label>
-                                    <input type="radio" value="wilks" name="mainMenuOption" id="wilks"
-                                        title="Calculate Wilks score."        
-                                        checked={'onerm' !== this.state.mainMenuOption}
-                                        onChange={this.handleChange} />
-                                    <label htmlFor="wilks">Wilks Score</label>&nbsp;
-                                </fieldset>
-                            </div>
-                        </form>        
-                    </div>
-                </div>
-            </div>
-            <hr />
-            {this.getForm()}
+            <nav className="menu-top">
+                <input type="checkbox" id="menu-btn" />
+                <label htmlFor="menu-btn"><span className="icon"></span></label>
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/onerm">One Rep Maximum</a>
+                    </li>
+                    <li>
+                        <a href="/wilks">Wilks Score</a>
+                    </li>
+                </ul>
+            </nav>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<MainIndex />} />
+                    <Route path="/onerm" element={<OnermForm />} />
+                    <Route path="/wilks" element={<WilksForm />} />
+                </Routes>
+            </BrowserRouter>
         </div>
         );
     }
