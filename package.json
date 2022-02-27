@@ -1,13 +1,13 @@
 {
-    "name": "gajre-wtmetrics",
+    "name": "wtmetrics",
     "version": "0.1.0",
-    "description": "SCSS Framework.",
+    "description": "Weight Training Metrics Calculator.",
     "homepage": "https://wtcalcs.gordonansell.com",
     "license": "MIT",
     "minimum-stability": "dev",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/gordon-ansell/gajre-wtmetrics"
+        "url": "git+https://github.com/gordon-ansell/wtmetrics"
     },
     "authors": [
         {
